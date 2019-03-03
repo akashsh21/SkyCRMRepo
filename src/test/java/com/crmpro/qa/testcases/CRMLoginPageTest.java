@@ -22,13 +22,13 @@ public class CRMLoginPageTest extends CRMTestBase {
 
 	@Test(dataProvider = "dataP1", dataProviderClass = TestdataProvider.class)
 	public void verify_Login_With_Valid_Credentials(String userName, String password) {
-		loginpage.login_with_valid_credentials(userName, password);
+		loginpage.getLogin(userName, password);
 		Assert.assertEquals(driver.getTitle(), "CRMPRO");
 	}
 
 	@Test(dataProvider = "dataP2", dataProviderClass = TestdataProvider.class)
 	public void verify_Login_With_Invalid_Credentials(String userName, String password) {
-		loginpage.login_with_Invalid_credentials(userName, password);
+		loginpage.getLogin(userName, password);
 		Assert.assertEquals(driver.getTitle(),
 				"CRMPRO - CRM software for customer relationship management, sales, and support.");
 	}

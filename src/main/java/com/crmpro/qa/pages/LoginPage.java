@@ -19,7 +19,7 @@ public class LoginPage extends CRMTestBase {
 	@FindBy(xpath = "//input[@name='password']")
 	WebElement pwdField;
 
-	@FindBy(xpath = "//input[@type='submit']")
+	@FindBy(xpath = "//input[@name='password']//following::input[1]")
 	WebElement loginBtn;
 
 	public String verfiyLoginPagetitle() {
@@ -33,12 +33,4 @@ public class LoginPage extends CRMTestBase {
 		loginBtn.click();
 		return new HomePage();
 	}
-
-	public void login_with_valid_credentials(String username, String password) {
-		getLogin(username, password);
-	}
-	public void login_with_Invalid_credentials(String username, String password) {
-		getLogin(username, password);
-	}
-
 }
