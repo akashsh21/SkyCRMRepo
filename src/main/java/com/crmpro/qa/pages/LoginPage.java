@@ -38,7 +38,7 @@ public class LoginPage extends CRMTestBase {
 		return new HomePage();
 	}
 
-	public void loginCredential() {
+	public void getLogin() {
 		userNameField.sendKeys((prop.getProperty("username")));
 		pwdField.sendKeys((prop.getProperty("password")));
 		TestUtils.implicitWait(10);

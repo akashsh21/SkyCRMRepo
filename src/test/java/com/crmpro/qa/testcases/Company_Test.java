@@ -14,7 +14,7 @@ public class Company_Test extends CRMTestBase {
 	@BeforeMethod
 	public void start() {
 		initialization();
-		loginpage.loginCredential();
+		loginpage.getLogin();
 		}
 	
 	@Test

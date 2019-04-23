@@ -41,7 +41,7 @@ public class CRMHomePageTest extends CRMTestBase {
 
 	@Test()
 	public void verify_New_company_option_test() {
-		loginpage.loginCredential();
+		loginpage.getLogin();
 		TestUtils.switchToFrames();
 		System.out.println(homepage.verifyNewCompanyOption());
 		Assert.assertEquals(true, homepage.verifyNewCompanyOption());
@@ -49,12 +49,12 @@ public class CRMHomePageTest extends CRMTestBase {
 
 	@Test(enabled = false)
 	public void test_credential_using_prop() {
-		loginpage.loginCredential();
+		loginpage.getLogin();
 	}
 
 	@Test()
 	public void verify_New_combinedForm_option_test() {
-		loginpage.loginCredential();
+		loginpage.getLogin();
 		TestUtils.switchToFrames();
 		System.out.println(homepage.verifyNewCombinedFormOption());
 		Assert.assertEquals(true, homepage.verifyNewCombinedFormOption());
@@ -62,16 +62,10 @@ public class CRMHomePageTest extends CRMTestBase {
 
 	@Test()
 	public void verify_FullSearchForm_option_test() {
-		loginpage.loginCredential();
+		loginpage.getLogin();
 		TestUtils.switchToFrames();
 		System.out.println(homepage.verifyFullSearchFormOption());
 		Assert.assertEquals(true, homepage.verifyFullSearchFormOption());
-
-	}
-	
-	@Test()
-	public void testMethod() {
-		System.out.println("hello, I am Akash");
 	}
 
 	@AfterMethod
