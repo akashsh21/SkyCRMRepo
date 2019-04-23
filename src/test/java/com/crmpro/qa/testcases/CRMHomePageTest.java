@@ -68,6 +68,11 @@ public class CRMHomePageTest extends CRMTestBase {
 		Assert.assertEquals(true, homepage.verifyFullSearchFormOption());
 
 	}
+	
+	@Test()
+	public void testMethod() {
+		System.out.println("hello, I am Akash");
+	}
 
 	@AfterMethod
 	public void tearDown() {
