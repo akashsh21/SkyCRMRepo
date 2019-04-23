@@ -15,7 +15,7 @@ public class NewContactPage extends CRMTestBase {
 
 	// Page object repository
 
-	@FindBy(xpath = "//a[contains(text(),'Contacts')]")
+	@FindBy(xpath = "//legend[contains(text(),'Contact Information')]")
 	WebElement contactInfoLabel;
 
 	@FindBy(name = "title")
@@ -60,17 +60,19 @@ public class NewContactPage extends CRMTestBase {
 	@FindBy(xpath = "//input[@name='receive_email' and @value='N']")
 	WebElement ReceiveMail_N_radiobtn;
 
-	//Methods for performing Actions
+	// Methods for performing Actions
+
+	public boolean veriyNewContactsPage() {
+		try {
+			return contactInfoLabel.isDisplayed();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+
 	public void selectTitle() {
 		TestUtils.selectOptionByVisibleText(titleDropdown, "Miss");
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 }

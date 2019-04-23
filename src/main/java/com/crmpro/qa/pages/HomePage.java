@@ -24,7 +24,7 @@ public class HomePage extends CRMTestBase {
 	WebElement usernameLabel;
 
 	@FindBy(xpath = "//a[contains(text(),'Companies')]")
-	WebElement companies;
+	static WebElement companies;
 
 	@FindBy(xpath = "//a[contains(text(),'New Company')]")
 	WebElement New_company;
@@ -32,11 +32,11 @@ public class HomePage extends CRMTestBase {
 	@FindBy(xpath = "//a[contains(text(),'Combined Form')]")
 	WebElement Combined_form;
 
-	@FindBy(xpath="//a[contains(text(),'New Contact')]")
+	@FindBy(xpath = "//a[contains(text(),'New Contact')]")
 	WebElement New_contact;
-	
-	@FindBy(xpath="//a[contains(text(),'Contacts')]")
-	WebElement Contacts;
+
+	@FindBy(xpath = "//a[contains(text(),'Contacts')]")
+	static WebElement Contacts;
 
 	public String verfiyHomePagetitle() {
 		return driver.getTitle();
@@ -46,30 +46,38 @@ public class HomePage extends CRMTestBase {
 		logoutLink1.click();
 		return new LoginPage();
 	}
-	
-	public boolean verifyNewCompanyOption() {
+
+	public void mouseHoverOnCompany() {
 		TestUtils.mouseHover(companies);
+	}
+
+	public void mouseHoverOnContacts() {
+		TestUtils.mouseHover(Contacts);
+	}
+
+	public boolean verifyNewCompanyOption() {
+		mouseHoverOnCompany();
 		return New_company.isDisplayed();
 	}
 
 	public boolean verifyNewCombinedFormOption() {
-		TestUtils.mouseHover(companies);
+		mouseHoverOnCompany();
 		return Combined_form.isDisplayed();
 	}
-	
+
 	public boolean verifyFullSearchFormOption() {
-		TestUtils.mouseHover(companies);
+		mouseHoverOnCompany();
 		return Full_Search_Form.isDisplayed();
 	}
-	
+
 	public void clickOnNewCompany() {
-		TestUtils.mouseHover(companies);
+		mouseHoverOnCompany();
 		New_company.click();
 	}
-	public void click_on_New_contacts_option() {
-		TestUtils.mouseHover(Contacts);
+
+	public void clickOnNewContacts() {
 		New_contact.click();
-		
+
 	}
-	
+
 }

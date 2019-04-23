@@ -1,5 +1,6 @@
 package com.crmpro.qa.testcases;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -7,11 +8,14 @@ import org.testng.annotations.Test;
 import com.crmpro.qa.base.CRMTestBase;
 import com.crmpro.qa.pages.HomePage;
 import com.crmpro.qa.pages.LoginPage;
+import com.crmpro.qa.pages.NewContactPage;
 import com.crmpro.qa.utils.TestUtils;
 
 public class NewContactsPageTest extends CRMTestBase {
 	LoginPage loginpage;
 	HomePage homepage;
+	NewContactPage new_contactpage;
+
 
 	@BeforeMethod
 	public void setUp() {
@@ -21,11 +25,14 @@ public class NewContactsPageTest extends CRMTestBase {
 	}
 	
 	@Test
-	public void test1() {
+	public void verifyNewContactsPage_TC001() {
 		loginpage.getLogin();
 		TestUtils.switchToFrames();
-		
-		homepage.click_on_New_contacts_option();
+		homepage.mouseHoverOnContacts();
+		homepage.clickOnNewContacts();
+		TestUtils.switchToFrames();
+		System.out.println(new_contactpage.veriyNewContactsPage());
+		Assert.assertEquals(true, new_contactpage.veriyNewContactsPage());
 	}
 	
 	@AfterMethod

@@ -3,14 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.crmpro.qa.testcases.CRMHomePageTest">
+      <class name="com.crmpro.qa.testcases.NewContactsPageTest">
         <methods>
           <include name="tearDown"/>
-          <include name="verify_FullSearchForm_option_test"/>
-          <include name="verify_New_combinedForm_option_test"/>
-          <include name="start"/>
+          <include name="verifyNewContactsPage_TC001"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- com.crmpro.qa.testcases.CRMHomePageTest -->
+      </class> <!-- com.crmpro.qa.testcases.NewContactsPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
