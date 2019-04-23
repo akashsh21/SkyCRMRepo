@@ -3,13 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.crmpro.qa.testcases.CRMLoginPageTest">
+      <class name="com.crmpro.qa.testcases.CRMHomePageTest">
         <methods>
-          <include name="start"/>
-          <include name="verify_Login_With_Invalid_Credentials" invocation-numbers="1"/>
           <include name="tearDown"/>
+          <include name="verify_FullSearchForm_option_test"/>
+          <include name="verify_New_combinedForm_option_test"/>
+          <include name="start"/>
         </methods>
-      </class> <!-- com.crmpro.qa.testcases.CRMLoginPageTest -->
+      </class> <!-- com.crmpro.qa.testcases.CRMHomePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

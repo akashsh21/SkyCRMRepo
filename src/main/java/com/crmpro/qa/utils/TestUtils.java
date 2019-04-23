@@ -1,25 +1,35 @@
 package com.crmpro.qa.utils;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.concurrent.TimeUnit;
-
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DateUtil;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import com.crmpro.qa.base.CRMTestBase;
+import com.google.common.io.Files;
 
 public class TestUtils extends CRMTestBase {
 
 	public static void implicitWait(int x) {
 		driver.manage().timeouts().implicitlyWait(x, TimeUnit.SECONDS);
 	}
+
+	/*
+	 * public static void explicitWait(int y) { WebDriverWait wait = new
+	 * WebDriverWait(driver,y); }
+	 */
 
 	static Workbook book;
 	static Sheet sheet;
@@ -49,12 +59,12 @@ public class TestUtils extends CRMTestBase {
 		int colCount = sheet.getRow(0).getLastCellNum();
 
 		Object[][] data = new Object[rowCount][colCount];
-		System.out.println("Row count is: " + rowCount + " & coloumn count is: " + colCount);
+		//System.out.println("Row count is: " + rowCount + " & coloumn count is: " + colCount);
 
 		for (int i = 0; i < rowCount; i++) {
 			for (int k = 0; k < colCount; k++) {
 				Cell a = sheet.getRow(i + 1).getCell(k);
-				//format the cells as per data type
+				// format the cells as per data type
 				data[i][k] = getCellValueAsString(a);
 			}
 		}
@@ -88,4 +98,19 @@ public class TestUtils extends CRMTestBase {
 		}
 		return strCellValue;
 	}
+
+	public static void takeScreenshotAtEndOfTest() throws IOException {
+		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		String currentDir = System.getProperty("user.dir");
+		Files.copy(scrFile, new File(currentDir + "/screenshots/" + System.currentTimeMillis() + ".png"));
+	}
+
+	public static void switchToFrames() {
+		driver.switchTo().frame("mainpanel");
+	}
+	public static void mouseHover(WebElement element) {
+		Actions action = new Actions(driver);
+		action.moveToElement(element).build().perform();
+	}
+	
 }

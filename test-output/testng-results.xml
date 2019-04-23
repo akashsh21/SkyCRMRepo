@@ -1,109 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="3" total="6" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="199810" started-at="2019-03-03T10:27:13Z" finished-at="2019-03-03T10:30:33Z">
+  <suite name="Default suite" duration-ms="115213" started-at="2019-04-13T15:06:11Z" finished-at="2019-04-13T15:08:06Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="199810" started-at="2019-03-03T10:27:13Z" finished-at="2019-03-03T10:30:33Z">
-      <class name="com.crmpro.qa.testcases.CRMLoginPageTest">
-        <test-method status="PASS" signature="start()[pri:0, instance:com.crmpro.qa.testcases.CRMLoginPageTest@3e6fa38a]" name="start" is-config="true" duration-ms="73829" started-at="2019-03-03T10:27:17Z" finished-at="2019-03-03T10:28:31Z">
+    <test name="Default test" duration-ms="115213" started-at="2019-04-13T15:06:11Z" finished-at="2019-04-13T15:08:06Z">
+      <class name="com.crmpro.qa.testcases.CRMHomePageTest">
+        <test-method status="PASS" signature="start()[pri:0, instance:com.crmpro.qa.testcases.CRMHomePageTest@5e3a8624]" name="start" is-config="true" duration-ms="18124" started-at="2019-04-13T15:06:11Z" finished-at="2019-04-13T15:06:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- start -->
-        <test-method status="PASS" signature="verify_Login_With_Invalid_Credentials(java.lang.String, java.lang.String)[pri:0, instance:com.crmpro.qa.testcases.CRMLoginPageTest@3e6fa38a]" name="verify_Login_With_Invalid_Credentials" duration-ms="10002" started-at="2019-03-03T10:28:31Z" data-provider="dataP2" finished-at="2019-03-03T10:28:41Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[dssdfsd]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[fdgdf]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="verify_FullSearchForm_option_test()[pri:0, instance:com.crmpro.qa.testcases.CRMHomePageTest@5e3a8624]" name="verify_FullSearchForm_option_test" duration-ms="14735" started-at="2019-04-13T15:06:29Z" finished-at="2019-04-13T15:06:44Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verify_Login_With_Invalid_Credentials -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crmpro.qa.testcases.CRMLoginPageTest@3e6fa38a]" name="tearDown" is-config="true" duration-ms="1118" started-at="2019-03-03T10:28:41Z" finished-at="2019-03-03T10:28:42Z">
+        </test-method> <!-- verify_FullSearchForm_option_test -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crmpro.qa.testcases.CRMHomePageTest@5e3a8624]" name="tearDown" is-config="true" duration-ms="890" started-at="2019-04-13T15:06:44Z" finished-at="2019-04-13T15:06:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="start()[pri:0, instance:com.crmpro.qa.testcases.CRMLoginPageTest@3e6fa38a]" name="start" is-config="true" duration-ms="23894" started-at="2019-03-03T10:28:42Z" finished-at="2019-03-03T10:29:06Z">
+        <test-method status="PASS" signature="start()[pri:0, instance:com.crmpro.qa.testcases.CRMHomePageTest@5e3a8624]" name="start" is-config="true" duration-ms="24621" started-at="2019-04-13T15:06:45Z" finished-at="2019-04-13T15:07:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- start -->
-        <test-method status="PASS" signature="verify_Login_With_Invalid_Credentials(java.lang.String, java.lang.String)[pri:0, instance:com.crmpro.qa.testcases.CRMLoginPageTest@3e6fa38a]" name="verify_Login_With_Invalid_Credentials" duration-ms="12215" started-at="2019-03-03T10:29:06Z" data-provider="dataP2" finished-at="2019-03-03T10:29:18Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[dsdc]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[  ]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="verify_New_combinedForm_option_test()[pri:0, instance:com.crmpro.qa.testcases.CRMHomePageTest@5e3a8624]" name="verify_New_combinedForm_option_test" duration-ms="15529" started-at="2019-04-13T15:07:09Z" finished-at="2019-04-13T15:07:25Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verify_Login_With_Invalid_Credentials -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crmpro.qa.testcases.CRMLoginPageTest@3e6fa38a]" name="tearDown" is-config="true" duration-ms="1205" started-at="2019-03-03T10:29:18Z" finished-at="2019-03-03T10:29:20Z">
+        </test-method> <!-- verify_New_combinedForm_option_test -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crmpro.qa.testcases.CRMHomePageTest@5e3a8624]" name="tearDown" is-config="true" duration-ms="740" started-at="2019-04-13T15:07:25Z" finished-at="2019-04-13T15:07:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="start()[pri:0, instance:com.crmpro.qa.testcases.CRMLoginPageTest@3e6fa38a]" name="start" is-config="true" duration-ms="21591" started-at="2019-03-03T10:29:20Z" finished-at="2019-03-03T10:29:41Z">
+        <test-method status="PASS" signature="start()[pri:0, instance:com.crmpro.qa.testcases.CRMHomePageTest@5e3a8624]" name="start" is-config="true" duration-ms="21364" started-at="2019-04-13T15:07:26Z" finished-at="2019-04-13T15:07:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- start -->
-        <test-method status="PASS" signature="verify_Login_With_Invalid_Credentials(java.lang.String, java.lang.String)[pri:0, instance:com.crmpro.qa.testcases.CRMLoginPageTest@3e6fa38a]" name="verify_Login_With_Invalid_Credentials" duration-ms="8498" started-at="2019-03-03T10:29:41Z" data-provider="dataP2" finished-at="2019-03-03T10:29:50Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[   ]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Aksah]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="verify_New_company_option_test()[pri:0, instance:com.crmpro.qa.testcases.CRMHomePageTest@5e3a8624]" name="verify_New_company_option_test" duration-ms="18401" started-at="2019-04-13T15:07:47Z" finished-at="2019-04-13T15:08:05Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verify_Login_With_Invalid_Credentials -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crmpro.qa.testcases.CRMLoginPageTest@3e6fa38a]" name="tearDown" is-config="true" duration-ms="1146" started-at="2019-03-03T10:29:50Z" finished-at="2019-03-03T10:29:51Z">
+        </test-method> <!-- verify_New_company_option_test -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crmpro.qa.testcases.CRMHomePageTest@5e3a8624]" name="tearDown" is-config="true" duration-ms="728" started-at="2019-04-13T15:08:05Z" finished-at="2019-04-13T15:08:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="start()[pri:0, instance:com.crmpro.qa.testcases.CRMLoginPageTest@3e6fa38a]" name="start" is-config="true" duration-ms="15756" started-at="2019-03-03T10:29:51Z" finished-at="2019-03-03T10:30:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- start -->
-        <test-method status="PASS" signature="verify_Login_With_Valid_Credentials(java.lang.String, java.lang.String)[pri:0, instance:com.crmpro.qa.testcases.CRMLoginPageTest@3e6fa38a]" name="verify_Login_With_Valid_Credentials" duration-ms="24819" started-at="2019-03-03T10:30:07Z" data-provider="dataP1" finished-at="2019-03-03T10:30:32Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[AkashS]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Akash@1993]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Login_With_Valid_Credentials -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crmpro.qa.testcases.CRMLoginPageTest@3e6fa38a]" name="tearDown" is-config="true" duration-ms="1063" started-at="2019-03-03T10:30:32Z" finished-at="2019-03-03T10:30:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.crmpro.qa.testcases.CRMLoginPageTest -->
+      </class> <!-- com.crmpro.qa.testcases.CRMHomePageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
